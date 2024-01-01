@@ -1,0 +1,287 @@
+body{
+    margin: 0;
+    padding: 0;
+    /* width: 100vw; */
+    /* overflow: hidden; */
+    /* background: rgb(255,247,173); */
+background: linear-gradient(135deg, rgba(255,247,173,1) 0%, rgba(255,169,249,1) 100%);
+}
+
+nav{
+    background-color: #FF7171;
+    position: fixed;
+    height: 70px;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    z-index: 100; 
+}
+
+nav>ul{
+    display: flex;
+    list-style:none;
+    padding-right: 50px;
+    justify-content: space-around;
+
+}
+
+li{
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.4rem;
+    cursor: pointer;
+
+    
+}
+li:hover{
+    border-bottom:2px solid black;
+}
+
+li>img{
+    height: 50px;
+}
+
+main{
+    padding-left: 3rem;
+    /* padding-right: 3rem; */
+    margin-top: 70px;
+    /* width: 100vw; */
+    /* overflow: hidden; */
+}
+
+.hero{
+    display: flex;
+    /* height: 80vh; */
+    /* width: 100vw; */
+    /* overflow: hidden; */
+
+}
+
+.hero>.left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50vw;
+    padding-right: 10vw;
+}
+
+.hero>.left>.hero-header{
+    margin-bottom: 10vh;
+    font-size: 3rem;
+}
+.hero>.left>.hero-description{
+
+    margin-bottom: 10vh;
+}
+.hero>.left>.hero-button{
+    width: 10rem;
+    height: 2rem;
+    border: none;
+    color: white;
+    /* font-weight: bold; */
+    background-color: #FF7171;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+
+}
+
+.hero>.left>.hero-button:hover{
+    transform: scale(1.1);
+}
+
+.hero>.right{
+    /* width: 20vw;
+    height: 30vh; */
+}
+
+.hero>.right>img{
+    width: 50vw;
+    height: 90vh;
+}
+
+.body{
+    display: flex;
+    /* width: 100vw; */
+    height: 100vh;
+    justify-content:center;
+    align-items: center;
+}
+
+.body>.left{
+    display: flex;
+    width: 70vh;
+    /* height: 70vh; */
+    padding-right: 30px;
+    overflow: hidden;
+}
+
+.body>.left>.gallery-left{
+    display: flex;
+    flex-direction: column;
+    height: 65vh;
+}
+
+.body>.left>.gallery-right{
+    height: 65vh;
+
+}
+
+.image1{
+    max-height: 50%;
+    object-fit: cover;
+}
+.image2{    
+    max-height: 50%;
+    object-fit: cover;
+}
+/* .image3{
+    height: 30px;
+    width: 30px;
+
+} */
+
+
+.body>.right{
+    padding-top: 50px;
+    padding-left: 30px;
+    padding-bottom: 50px;
+    background-color: #FF7171;
+    width: 35vw;
+    /* height: 25vh; */
+
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+  }
+  
+.column {
+    flex: 25%;
+    /* max-width: 25%; */
+    padding: 0 4px;
+    height: 50vh;
+    margin-right: 10px;
+
+  }
+  
+.column img {
+    margin-top: 8px;
+    width: 100%;
+    height: 100%;
+}
+  
+
+.button{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+.button>span{
+    padding-left: 10px;
+}
+
+.button:hover{
+    transform: scale(1.1);
+    margin-left: 30px;
+
+}
+
+
+.card-desc{
+    font-size: 3rem;
+}
+.card-desc>span{
+    display: block;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+}
+
+.nav-mobile{
+    display: none;
+    pointer-events: none;
+}
+
+@media screen and (max-width: 768px) {
+
+    .nav-mobile{
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: center;
+        pointer-events: all;
+        background-color: #FF7171;
+        position: fixed;
+        height: 70px;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 100; 
+    }
+    .nav-mobile>img{
+        height: 50px;
+    }
+
+    nav{
+        display: none;
+        pointer-events: none;
+    }
+    
+    
+    main{
+        margin-top: 100px;
+    }
+    
+    .hero{
+        flex-direction: column-reverse;
+    
+    }
+    
+    .hero>.left{
+        flex-direction: column;
+        width: auto;
+    }
+    
+    .hero>.left>.hero-header{
+        margin-bottom: 5vh;
+        font-size: 2rem;
+        align-self: center;
+    }
+    .hero>.left>.hero-description{
+        margin-bottom: 5vh;
+    }
+    .hero>.left>.hero-button{
+        align-self: center;
+    
+    }
+
+    
+    .hero>.right>img{
+        width: 80vw;
+        height: auto;
+    }
+    
+    .body{
+        /* display: flex; */
+        flex-direction: column;
+        width: 80vw;
+        overflow: hidden;
+    }
+    
+    .body>.left{
+        margin-bottom: 40px;
+    }
+    
+    .body>.right{
+        width: 80vw;
+    }
+    
+  }
+
